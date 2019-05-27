@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    
+    #main {
+        width: 480px;
+        border: 5px solid #bbb;
+        height: 480px;
+        top: 30px;
+        margin: 0 auto;
+        border-radius: 2%;
+    }
+    
+    .she {
+        width: 10px;
+        height: 10px;
+        border: 1px solid #fff;
+        border-radius: 3px 3px;
+        background-color: green;
+        float: left;
+        /* position: absolute; */
+        /* display: flex; */
+    }
+    
+    .ctrl {
+        margin: 15px 15px;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div class="ctrl">
+        <!-- <input type="button" id="start" onclick="start()" value="开始"> -->
+        <input type="button" id="stop" onclick="stop()" value="暂停">
+        <input type="button" id="init" onclick="init()" value="初始化">
+    </div>
+    <div id="main">
+    </div>
+</body>
+
+</html>
+<script src="snake.js"></script>
+<script src="food.js"></script>
+<script>
+    var obj;
+    var timer;
+    var foods;
+
+    function init() {
+        var main = document.getElementById("main");
+        foods = new food(10, 10, main);
+        foods.createFood();
+        if (obj) {
+            location.reload();
+        } else {
+            obj = new snake(10, 10, main, foods);
+            obj.createBodey();
+        }
+    }
+
+    function start() {
+        var main = document.getElementById("main");
+        timer = setInterval("obj.move()", 1000);
+    }
+
+    function stop() {
+        clearInterval(timer);
+    }
+
+    document.onkeydown = function(event) {
+
+        clearInterval(timer);
+        var key = event.keyCode;
+        if (key == 37) {
+            obj.currentDirection = "left";
+            timer = setInterval("obj.move()", 300);
+        } else if (key == 38) {
+            obj.currentDirection = "up";
+            timer = setInterval("obj.move()", 300);
+        } else if (key == 39) {
+            obj.currentDirection = "right";
+            timer = setInterval("obj.move()", 300);
+        } else if (key == 40) {
+            obj.currentDirection = "down"
+            timer = setInterval("obj.move()", 300);
+        } else if (key == 32) {
+            clearInterval(timer);
+        }
+
+
+    }
+
+    init();
+    //document.insertBefore()
+</script>

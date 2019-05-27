@@ -1,0 +1,51 @@
+                                @media screen and (max-width: 420px) {
+                                    /*当屏幕尺寸小于600px时，应用下面的CSS样式*/
+                                    .navlogo {
+                                        margin-top: 10px;
+                                        width: 95%;
+                                        /* height: 40px; */
+                                    }
+                                    #myCarousel {
+                                        height: 200px;
+                                        width: 100%;
+                                    }
+                                    .carousel-inner {
+                                        height: 200px;
+                                        width: 100%;
+                                    }
+                                    .carousel-inner>.item {
+                                        height: 200px;
+                                        width: 100%;
+                                    }
+                                    .carousel-inner>.item>img {
+                                        height: 200px;
+                                        width: 100%;
+                                    }
+                                    .main {
+                                        width: 100%;
+                                        padding: 5px;
+                                    }
+                                    .main>.list2>.row {
+                                        width: 100%;
+                                    }
+                                    .main>.list2>.row>.column {
+                                        height: 90%;
+                                        padding: 0px;
+                                    }
+                                    .main>.list>.row>.column>img {
+                                        width: 90%;
+                                        height: 50%;
+                                    }
+                                    .main>.list>.row>.column>.text {
+                                        width: 90%;
+                                        height: 50%;
+                                        text-align: left;
+                                    }
+                                    /* .main .list,
+                                    .list2 {
+                                        width: 100%;
+                                    } */
+                                    .footer {
+                                        display: none;
+                                    }
+                                }

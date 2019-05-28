@@ -28,7 +28,7 @@
             if (index % 7 === 0) {
                 html += '<tr>';
             }
-            html += '<td>' + date.showDate + '</td>'
+            html += '<td data-date=' + date.showDate + ' >' + date.showDate + '</td>'
             if (index % 7 === 6) {
                 html += '</tr>';
             }
@@ -81,7 +81,7 @@
         }, false);
         wapper.addEventListener("click", function(e) {
             var $target = e.target;
-            console.log($target.classList);
+            //console.log($target.classList);
             if (!$target.classList.contains("ui-datepicker-btn")) {
                 return;
             }
@@ -95,5 +95,31 @@
 
         }, false);
 
+        wapper.addEventListener("click", function(e) {
+            var $target = e.target;
+            if ($target.tagName.toLowerCase() !== 'td') {
+                return;
+            }
+            var date = new Date(monthData.year, monthData.month, $target.dataset.date);
+            $input.value = format(date);
+
+        }, false);
+
+    }
+
+    function format(date) {
+        var ret = '';
+        var m = date.getMonth() + 1;
+        if (m <= 9) {
+            m = "0" + m;
+        }
+        var d = date.getDate();
+        if (d <= 9) {
+            d = "0" + d;
+        }
+        ret += date.getFullYear() + "-";
+        ret += m + "-";
+        ret += d;
+        return ret;
     }
 })();

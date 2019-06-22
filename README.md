@@ -13,7 +13,8 @@ https://laiyue.github.io/WebDemo/login.html
 https://laiyue.github.io/WebDemo/snake/demo.html
 
 jquery 时间插件：
-贪吃蛇：
+
+
 https://laiyue.github.io/WebDemo/jquery/index.html
 
 

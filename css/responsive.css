@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header-banner {
+    display: flex;
+    height: 2.7rem;
+    justify-content: center;
+}
+
+.header-banner .logo {
+    flex-grow: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-banner .nav {
+    flex-grow: 4;
+    font-size: 0.5rem;
+    font-weight: 300;
+    color: silver;
+    display: flex;
+    justify-content: center;
+}
+
+.header-banner .nav ul {
+    list-style: none;
+    display: inline-flex;
+}
+
+.header-banner .nav ul li {
+    margin: 0rem 0.45rem;
+    line-height: 2.7rem;
+}
+
+.header-banner .user {
+    flex-grow: 2;
+    font-size: 14px;
+    color: silver;
+    display: flex;
+    align-items: center;
+}
+
+.header-banner .user img {
+    width: 24px;
+    height: 24px;
+    margin: 10px;
+}
+
+.swiper-banner {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.swiper-banner img {
+    height: 11.52rem;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    padding: 0.54rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .container-banner img {
+    height: 5.488rem;
+}
+
+.product-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product-list-title {
+    padding: 30px 0;
+    color: #776a67;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+/* .product-list-tab {
+    font-size: 18px;
+    width: 5.488rem;
+    display: flex;
+    justify-content: space-around;
+} */
+
+.product-list-tab .checkmore {
+    text-decoration: none;
+}
+
+.container .con-div {
+    margin: 0.5rem 0rem;
+}
+
+.container .product-list li {
+    margin: 0rem 0.33rem;
+}
+
+.container .product-list li .card-main-img {
+    width: 9.7rem;
+    height: 7.28em;
+}
+
+.card-main-img-02 {
+    height: 7.13rem;
+    width: 7.13rem;
+}
+
+.container .card-content .card-content-title {
+    font-size: 16px;
+}
+
+.container .card-content .card-content-desc {
+    font-size: 14px;
+    color: #776a67;
+}
+
+.container .card-content .card-content-price {
+    font-size: 16px;
+    color: red;
+    vertical-align: middle;
+}
